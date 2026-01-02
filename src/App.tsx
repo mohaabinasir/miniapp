@@ -1,5 +1,5 @@
 import Home from '@/pages/Home'
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router'
+import {BrowserRouter, Routes, Route} from 'react-router'
 import {PopupProvider} from '@/hooks/usePopup'
 import {useRipple} from '@/hooks/useRipple'
 import {Edit} from '@/pages/Edit'
@@ -13,7 +13,7 @@ function App() {
            <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/edit" element={<Edit />} />
-               <Route path="/*" element={<Navigate to='/' />} />
+               <Route path="/*" element={<Home />} />
            </Routes>
        </BrowserRouter>
        </PopupProvider>
