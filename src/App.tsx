@@ -13,7 +13,7 @@ function App() {
            <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/edit" element={<Edit />} />
-               <Route path="/*" element={<Home />} />
+               <Route path="/*" element={<Home fromUnknowPath={true}/>} />
            </Routes>
        </BrowserRouter>
        </PopupProvider>
