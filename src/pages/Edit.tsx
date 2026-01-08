@@ -103,7 +103,7 @@ export const Edit = () => {
                         const data = JSON.stringify(userData || {})
                         localStorage.setItem('__tg_user', data)
                         storage.set('token', token)
-                        navigate('/')
+                        window.histroy.back()
                     }}
                 >
                     Save
