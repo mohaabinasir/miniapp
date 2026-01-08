@@ -612,9 +612,13 @@ export default function Home() {
         </header>}
         
         
-        {webUrl && <iframe src={webUrl} className="w-full flex-1 border-none" onError={() => setFailed(true)} ref={webapp}>
-            
-        </iframe>}
+        {webUrl &&
+        <iframe
+           src={webUrl}
+           className="w-full flex-1 border-none" onError={() => setFailed(true)} 
+           ref={webapp}
+           allow="clipboard-read; clipboard-write; camera"
+        />}
         {!webUrl && !failed && <div className="flex w-full h-[90%] justify-center items-center flex-col gap-2 overflow-hidden">
             <h3 className="text-2xl">Loading</h3>
             <p className="text-[#999]"></p>
