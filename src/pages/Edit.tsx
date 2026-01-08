@@ -101,7 +101,7 @@ export const Edit = () => {
                         const data = JSON.stringify(userData || {})
                         localStorage.setItem('__tg_user', data)
                         storage.set('token', token)
-                        window.histroy.back()
+                        window.history.back()
                     }}
                 >
                     Save
