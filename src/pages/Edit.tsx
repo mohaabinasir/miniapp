@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import type { User } from '@/utils/makeInitData'
-import { useNavigate } from 'react-router'
 import storage from '@/utils/storage'
 
 export const Edit = () => {
@@ -8,7 +7,6 @@ export const Edit = () => {
         JSON.parse(localStorage.getItem('__tg_user') || '{}')
     )
     const [token, setToken] = useState<string>(storage.get('token') || '')
-    const navigate = useNavigate()
 
     return (
         <div className="w-screen h-screen bg-black text-white">
